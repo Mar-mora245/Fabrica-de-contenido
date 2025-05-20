@@ -2,11 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
   }
   
   body {
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
   }
   
   header {
@@ -92,10 +92,6 @@
     background-color: #0E1A2B;
     color: #C9FF5E; /* Cambia el color del texto cuando el mouse pasa por encima */
   }  
-
-  .has-submenu > a::after {
-  content: none !important;
-  }
 
   .banner {
   width: 100%;
