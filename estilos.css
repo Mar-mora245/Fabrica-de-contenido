@@ -237,6 +237,13 @@
   background-position: calc(100% - -300px) center;
 }
 
+a.cargo {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
 .titulo-cargos {
   font-size: 50px;
   font-weight: bold;
@@ -340,6 +347,26 @@
     transform: scale(1.1);
     background-color: #FF4D6D;
   }
+
+  a.cta-button {
+  text-decoration: none;
+  color: #fff;              /* asegura que el texto del enlace sea blanco, igual que el botón */
+  font-size: 18px;          /* igual que .cta-button */
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  opacity: 0;
+  animation: buttonAnim 2s forwards 1s;
+  display: inline-block;    /* para que se comporte como botón */
+  background-color: #B28DFF; /* igual que .cta-button */
+}
+
+a.cta-button:hover {
+  transform: scale(1.1);
+  background-color: #FF4D6D;
+}
   
   /* Animations */
   @keyframes titleAnim {
