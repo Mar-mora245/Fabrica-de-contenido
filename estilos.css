@@ -1790,6 +1790,81 @@ ul {
   color: #000000;
 }
 
+section {
+  background-color: #f9f9f9;
+  border-left: 6px solid #00C176;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 193, 118, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+  box-shadow: 0 6px 20px rgba(0, 193, 118, 0.2);
+}
+
+/* Títulos principales */
+section h2 {
+  color: #00C176;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #00C176;
+  padding-bottom: 0.3rem;
+}
+
+/* Subtítulos */
+section h3 {
+  color: #22a86b;
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Párrafos */
+section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444444;
+  margin-bottom: 1rem;
+}
+
+/* Listas */
+section ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+section ul li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.5rem;
+  color: #333333;
+}
+
+section ul li::before {
+  content: "✔";
+  color: #00C176;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  section {
+    padding: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  section h3 {
+    font-size: 1.2rem;
+  }
+}
 
 /* preguntas frecuentes */
 
