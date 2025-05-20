@@ -15,7 +15,7 @@ function sendMessage(message = null) {
     // Mostrar respuesta del bot
     const botMsg = document.createElement('div');
     botMsg.className = 'chat-message';
-    botMsg.textContent = generateBotResponse(msg);
+    botMsg.innerHTML = generateBotResponse(msg);  // Cambia textContent por innerHTML
     chatBody.appendChild(botMsg);
   
     if (!message) input.value = '';
@@ -28,12 +28,20 @@ function sendMessage(message = null) {
   }
   
   // Generar respuesta automática del bot
-  function generateBotResponse(userInput) {
-    const input = userInput.toLowerCase();
-    if (input.includes('hola')) return '¡Hola! ¿En qué puedo ayudarte?';
-    if (input.includes('ayuda')) return 'Claro, dime en qué necesitas ayuda.';
-    if (input.includes('preguntas')) return 'Estoy aquí para responder todas tus preguntas.';
-    return 'No entendí tu mensaje. ¿Podrías reformularlo?';
+function generateBotResponse(userInput) {
+  const input = userInput.toLowerCase();
+
+  if (input.includes('hola')) 
+    return '¡Hola! 😊 ¿En qué puedo ayudarte hoy? Si tienes dudas sobre diseño, cargos, o necesitas información, aquí estoy.';
+  
+  if (input.includes('ayuda')) 
+    return '¡Por supuesto! 💡 Cuéntame en qué necesitas ayuda o si prefieres, puedes contactar a un asesor escribiendo a <a href="mailto:fabricadecontenido@cun.edu.co">fabricadecontenido@cun.edu.co</a>.';
+  
+  if (input.includes('preguntas')) 
+    return 'Estoy aquí para responder todas tus preguntas. Recuerda que también puedes escribirnos a <a href="mailto:fabricadecontenido@cun.edu.co">fabricadecontenido@cun.edu.co</a> si deseas atención personalizada.';
+  
+  // Mensaje por defecto con sugerencia de contacto
+  return '¡Ups! 🤔 No entendí tu mensaje. ¿Podrías reformularlo? O si lo prefieres, contacta a un asesor directamente en <a href="mailto:fabricadecontenido@cun.edu.co">fabricadecontenido@cun.edu.co</a>. ¡Estoy aquí para ayudarte!';
   }
   
   // Esperar a que el DOM cargue
@@ -54,4 +62,5 @@ function sendMessage(message = null) {
       toggle.style.display = 'block';
     });
   });
+
   
