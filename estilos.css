@@ -1747,6 +1747,50 @@ ul {
   font-size: 0.9rem;
 }
 
+.quien-es-practicante {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 90px;
+  gap: 40px;
+  background-color: #fff;
+  background-image: url('MULTIMEDIA/nave.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: right -300px bottom -10px;
+  background-size: 800px, 900px;
+}
+
+.practicante-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.practicante-video {
+  flex: 1;
+  max-width: 50%;
+  padding: 0 50px;
+}
+
+.practicante-video video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.practicante-texto h2 {
+  color: #39FF14;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.practicante-texto p {
+  font-size: 18px;
+  color: #000000;
+}
+
+
 /* preguntas frecuentes */
 
 .fondoreglamento {
