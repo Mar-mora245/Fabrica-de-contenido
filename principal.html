@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog Institucional</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="carrusel.js"></script>
+  <script src="chat.js"></script>
+</head>
+<body>
+<header>
+    <a href="principal.html" class="logo">SEALAB</a>
+  <nav>
+    <ul class="menu-principal">
+      <li><a href="Quiénes Somos.html">¿Quiénes somos?</a></li>
+      <li class="has-submenu">
+        <a href="#">Cargo</a>
+        <ul class="submenu">
+          <li><a href="Liderselab.html">Líder Sealab</a></li>
+          <li><a href="lidergif.html">Líder GIF & Especialistas GIF</a></li>
+          <li><a href="analista.html">Analista de diseño</a></li>
+          <li><a href="auxiliarcreativo.html">Auxiliar creativo</a></li>
+          <li><a href="auxiliarcx.html">Auxiliar CX</a></li>
+          <li><a href="practicante.html">Practicante de diseño</a></li>
+        </ul>
+      </li>
+      <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+      <li><a href="reglamento.html">Reglamento institucional</a></li>
+    </ul>
+  </nav>
+<!-- Icono flotante -->
+<div id="chatToggle" class="chat-toggle">
+  <i class="fas fa-comment-dots"></i>
+</div>
+
+<!-- Contenedor del chatbot -->
+<div class="chat-container" id="chatContainer" style="display: none;">
+  <div class="chat-header">
+    ChatBot
+    <button class="close-chat" id="closeChat">×</button>
+  </div>
+
+  <div class="chat-body" id="chatBody"></div>
+
+  <div class="quick-buttons">
+    <button onclick="quickMessage('Hola')">Hola</button>
+    <button onclick="quickMessage('Necesito ayuda')">Necesito ayuda</button>
+    <button onclick="quickMessage('Tengo preguntas')">Tengo preguntas</button>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+    <button onclick="sendMessage()">Enviar</button>
+  </div>
+</div>
+</header>
+<section class="banner">
+    <div class="carousel">
+      <div class="slides active">
+        <img src="MULTIMEDIA/banner1.jpg" alt="Banner 1">
+      </div>
+      <div class="slides">
+        <img src="MULTIMEDIA/banner2.jpg" alt="Banner 2">
+      </div>
+      <div class="slides">
+        <img src="MULTIMEDIA/banner3.jpg" alt="Banner 3">
+      </div>
+      <div class="slides">
+        <img src="MULTIMEDIA/banner4.jpg" alt="Banner 4">
+      </div>
+      <div class="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+        <span class="dot" onclick="goToSlide(3)"></span>
+      </div>
+    </div>
+  </section>  
+<section class="quienes-somos">
+    <div class="contenedor-quienes">
+      <div class="contenido">
+        <div class="columna-izquierda">
+          <img src="MULTIMEDIA/lider.png" alt="Líder del equipo" class="imagen-lider">
+        </div>
+        <div class="columna-derecha">
+          <h2 class="titulo-seccion">¿Quiénes somos?</h2>
+          <p>
+            Somos un equipo apasionado por el contenido instruccional. Creamos cursos virtuales que no solo enseñan, 
+            sino que también generan conexión emocional gracias a nuestra huella somática.
+          </p>
+          <a href="#conocenos" class="boton-conoce">Conoce más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="seccion-cargos">
+    <h2 class="titulo-cargos">Nuestro Equipo</h2>
+    <div class="contenedor-cargos">
+      <div class="cargo">
+        <img src="MULTIMEDIA/lider-sealab.png" alt="Líder Sealab">
+        <p>Líder Sealab</p>
+      </div>
+      <div class="cargo">
+        <img src="MULTIMEDIA/lider-gif.png" alt="Líder GIF">
+        <p>Líder GIF</p>
+      </div>
+      <div class="cargo">
+        <img src="MULTIMEDIA/analista.png" alt="Analista de Diseño">
+        <p>Analista de Diseño</p>
+      </div>
+      <div class="cargo">
+        <img src="MULTIMEDIA/auxiliar-creativo.png" alt="Auxiliar Creativo">
+        <p>Auxiliar Creativo</p>
+      </div>
+      <div class="cargo">
+        <img src="MULTIMEDIA/auxiliar-cx.png" alt="Auxiliar CX">
+        <p>Auxiliar CX</p>
+      </div>
+      <div class="cargo">
+        <img src="MULTIMEDIA/practicante.png" alt="Practicante de Diseño">
+        <p>Practicante de Diseño</p>
+      </div>
+    </div>
+  </section> 
+  <section class="creative-section">
+    <div class="content-container">
+      <h1 class="section-title">Imagen de <br>Auxiliar-Creativo</h1>
+      <p class="section-description">
+        Aquí encontrarás las preguntas más <strong>frecuentes</strong>, iconos y respuestas para liberar toda tu <strong>creatividad</strong>!
+      </p>
+      <div class="cta-container">
+        <button class="cta-button">¡Explora tu Creatividad!</button>
+      </div>
+    </div>
+  </section>
+  <section class="reglamento-section">
+    <div class="reglamento-content">
+      <div class="text-content">
+        <h2>¿Reglamento Estudiantil?</h2>
+        <p>
+          El reglamento estudiantil establece las normas que regulan la vida académica y disciplinaria de la institución.
+        </p>
+        <button>Conoce más</button>
+      </div>
+      <div class="image-content">
+        <img src="MULTIMEDIA/reglamiento.png" alt="Analista" class="floating-image">
+      </div>
+    </div>
+  </section>  
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <p>© 2025 Marem. Todos los derechos reservados.</p>
+  </footer>  
+</body>
+</html>
