@@ -28,69 +28,61 @@
     text-decoration: none; /* Quita la línea subrayada */
   }
   
-  nav {
-    display: flex;
-  }
-  
-  .menu-principal {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-  
-  .menu-principal li {
-    position: relative;
-  }
-  
-  .menu-principal li a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 8px 10px;
+  /* Botón hamburguesa oculto en pantallas grandes */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Menú oculto por defecto en móviles */
+#main-nav {
+  display: flex;
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+  .hamburger {
     display: block;
-    transition: background 0.3s, color 0.3s;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1100;
   }
-  
-  .menu-principal li a:hover {
+
+  #main-nav {
+    display: none;
+    flex-direction: column;
     background-color: #0E1A2B;
-    border-radius: 5px;
-    color: #C9FF5E; /* Cambia el color del texto cuando el mouse pasa por encima */
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
   }
-  
-  /* Submenú */
+
+  #main-nav.active {
+    display: flex;
+  }
+
+  .menu-principal {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .submenu {
+    position: static;
+    padding-left: 10px;
+    background-color: #152238;
+  }
+
   .has-submenu:hover .submenu {
     display: block;
   }
-  
-  .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #0E1A2B;
-    border-radius: 5px;
-    padding: 10px 0;
-    min-width: 220px;
-    z-index: 1000;
-    list-style: none; /* Elimina las bolitas */
-  }
-  
-  .submenu li {
-    width: 100%;
-  }
-  
-  .submenu li a {
-    padding: 8px 16px;
-    color: #ffffff;
-    text-decoration: none;
-    display: block;
-    transition: background 0.3s, color 0.3s;
-  }
-  
-  .submenu li a:hover {
-    background-color: #0E1A2B;
-    color: #C9FF5E; /* Cambia el color del texto cuando el mouse pasa por encima */
-  }  
 
   .banner {
   width: 100%;
